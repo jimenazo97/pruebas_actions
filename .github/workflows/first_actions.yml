@@ -1,0 +1,13 @@
+# This is a basic workflow to help you get started with Actions
+# your-repo-name/.github/workflows/first_workflow.yml
+name: First Workflow                                               
+on: push                                                  
+jobs:                         
+  first-job:                           
+    name: Say hi                           
+    runs-on: ubuntu-latest                           
+    steps:                           
+    - name: Print a greeting                             
+      run: echo Hi from our first workflow!
+      
+
