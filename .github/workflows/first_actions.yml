@@ -29,5 +29,5 @@ jobs:
         run: pip install scrapy         
  
       - name: Get TDS posts about GitHub Actions                                 
-        run: python3 prueba.py
+        run: python3 /home/runner/work/pruebas_actions/prueba.py
 
