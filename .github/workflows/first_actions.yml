@@ -23,11 +23,11 @@ jobs:
       - name: Set up Python 3.8                               
         uses: actions/setup-python@v2                               
         with:                                 
-          python-version: '3.8'          
+          python-version: '3.*'          
                                                   
       - name: Install Scrapy                               
         run: pip install scrapy         
  
       - name: Get TDS posts about GitHub Actions                                 
-        run: scrapy runspider posts_spider.py -o posts.json
+        run: python3 prueba.py
 
