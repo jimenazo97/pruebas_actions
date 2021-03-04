@@ -9,7 +9,7 @@ jobs:
     steps:    
       - name: Check directory
         run: |
-          git clone https://jimenazo97:Cuatrocuatros_97@github.com/jimenazo97/validaciones.git
+          git clone https://jimenazo97:Cuatrocuatros_97@github.com/jimenazo97/pruebas_actions.git
           echo $GITHUB_WORKSPACE
           ls -l $GITHUB_WORKSPACE/validaciones
       - name: Set up Python
