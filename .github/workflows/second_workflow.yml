@@ -23,4 +23,4 @@ jobs:
           python -m pip install mysql-connector
           python -m pip install GitPython
       - name: Run script
-        run: python $GITHUB_WORKSPACE/validaciones/.github/workflows/prueba.py $GITHUB_WORKSPACE/validaciones
+        run: python $GITHUB_WORKSPACE/pruebas_actions/.github/workflows/prueba.py $GITHUB_WORKSPACE/validaciones
