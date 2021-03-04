@@ -9,14 +9,26 @@ jobs:
     name: GithubAction python2 test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+    
+    
+      -name: Check directory
+       run:|
+          git clone https://github.com/jimenazo97/validaciones
+          echo $GITHUB_WORKSPACE
+          ls -l $GITHUB_WORKSPACE/
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.x'
+          python-version: '3.6.9'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip setuptools wheel
+          python -m pip install pyyaml
+          python -m pip install mysql-connector
+          python -m pip install GitPython
       - name: Install dependencies
         run: python -m pip install --upgrade pip setuptools wheel
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"
       - name: Run script
-        run: python .github/workflows/prueba.py
+        run: run: python $GITHUB_WORKSPACE/pruebas_actions/.github/workflows/prueba.py $GITHUB_WORKSPACE/validaciones
