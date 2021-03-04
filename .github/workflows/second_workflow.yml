@@ -11,7 +11,7 @@ jobs:
         run: |
           git clone https://jimenazo97:Cuatrocuatros_97@github.com/jimenazo97/validaciones.git
           echo $GITHUB_WORKSPACE
-          ls -l $GITHUB_WORKSPACE/test_validations
+          ls -l $GITHUB_WORKSPACE/validaciones
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
