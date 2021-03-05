@@ -6,12 +6,12 @@ import yaml
 
  
 
-#path=sys.argv[1]
-#print ("path:  "+path)
+path=sys.argv[1]
+print ("path:  "+path)
 
  
 
-repo = git.Repo("/Users/andresjimenez/Documents/GitHub/pruebas_actions/validaciones")
+repo = git.Repo(path)
 hcommit = repo.head.commit
 for diff_added in hcommit.diff("HEAD~1"):
     fileChanged=str(diff_added).split("==")[0].rstrip()
