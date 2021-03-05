@@ -6,12 +6,10 @@ import yaml
 
  
 
-#path=sys.argv[1]
-#print ("path:  "+path)
+path=sys.argv[1]
+print ("path:  "+path)
 
- 
-path="/Users/andresjimenez/Documents/GitHub/pruebas_actions"
-repo = git.Repo("/Users/andresjimenez/Documents/GitHub/pruebas_actions")
+repo = git.Repo(path)
 hcommit = repo.head.commit
 
 for diff_added in hcommit.diff("HEAD~1"):
