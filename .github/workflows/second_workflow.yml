@@ -11,7 +11,7 @@ jobs:
         run: |
           git clone https://jimenazo97:Cuatrocuatros_97@github.com/jimenazo97/pruebas_actions.git
           echo $GITHUB_WORKSPACE
-          ls -l $GITHUB_WORKSPACE
+          ls -l $GITHUB_WORKSPACE/pruebas_actions/
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
